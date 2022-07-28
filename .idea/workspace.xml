@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c768838-c9a6-4c3b-9805-04631b6203aa" name="Changes" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HttpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JsonBuild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TestResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Fight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/ItemConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/PersonConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Fighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/FighterConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBuild.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +50,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameServer",
+    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameClient",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -52,6 +59,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maximase\IdeaProjects\GameServer\src\main\java" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657201094564</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.0">
+      <created>1657396582427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657396582427</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
