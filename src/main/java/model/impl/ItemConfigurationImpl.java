@@ -19,6 +19,14 @@ public class ItemConfigurationImpl implements ItemConfiguration {
     public ItemConfigurationImpl() {
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
     public String getName() {
         return name;
     }

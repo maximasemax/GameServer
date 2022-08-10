@@ -1,3 +1,5 @@
+package HttpHandler;
+
 import model.impl.Fighter;
 import model.impl.FighterConfiguration;
 import model.impl.Item;

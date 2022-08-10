@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c768838-c9a6-4c3b-9805-04631b6203aa" name="Changes" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Fight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ItemConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/PersonConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Fighter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/FighterConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DBForItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DBForPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HttpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBuild.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Fight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForFight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameClient",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maximase/IdeaProjects/GameClient&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -109,7 +111,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

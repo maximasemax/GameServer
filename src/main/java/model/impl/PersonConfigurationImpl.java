@@ -23,6 +23,10 @@ public class PersonConfigurationImpl implements PersonConfiguration {
         return persons;
     }
 
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
+    }
+
     @Override
     public String toString() {
         return "PersoneConfiguration{"

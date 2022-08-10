@@ -1,15 +1,10 @@
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParser;
+package JsonBild;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import model.impl.Fighter;
 import model.impl.FighterConfiguration;
-import model.impl.Person;
 
-import java.io.File;
-
-public class JsonBuild {
+public class JsonBuildForFight {
 
 
 

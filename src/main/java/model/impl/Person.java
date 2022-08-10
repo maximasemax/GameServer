@@ -39,6 +39,13 @@ public class Person {
         this.name = name;
     }
 
+    public void setAttackSkill(float attackSkill) {
+        this.attackSkill = attackSkill;
+    }
+
+    public void setDefenceSkill(float defenceSkill) {
+        this.defenceSkill = defenceSkill;
+    }
 
     public String getName() {
         return name;
