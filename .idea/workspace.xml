@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c768838-c9a6-4c3b-9805-04631b6203aa" name="Changes" comment="1.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DBForItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/DBForPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForPerson.java" afterDir="false" />
+    <list default="true" id="9c768838-c9a6-4c3b-9805-04631b6203aa" name="Changes" comment="3.0 &#10;Add history of round to db and refactor cod">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/RecordToBD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBuild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForFight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MyHttpHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TestResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/ItemConfigurationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/impl/PersonConfigurationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HttpService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +40,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maximase/IdeaProjects/GameClient&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameClient1",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -103,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657396582427</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2.0 &#10;Add requests for item, person.">
+      <created>1660122495186</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660122495186</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +130,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0" />
+    <MESSAGE value="2.0 &#10;Add requests for item, person." />
+    <MESSAGE value="3.0 &#10;Add history of round to db and refactor cod" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.0 &#10;Add history of round to db and refactor cod" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.postgresql.util.PSQLException" memberName="serverError" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

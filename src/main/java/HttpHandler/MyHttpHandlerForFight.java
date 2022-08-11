@@ -8,6 +8,7 @@ import model.impl.FighterConfiguration;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.sql.SQLException;
 
 public class MyHttpHandlerForFight implements HttpHandler {
     @Override
@@ -15,17 +16,13 @@ public class MyHttpHandlerForFight implements HttpHandler {
 
         if ("POST".equals(exchange.getRequestMethod())) {
             String requestBody = getRequestBodyAsString(exchange);
-
-
             try {
                 System.out.println("try");
                 handleResponse(exchange, requestBody);
-            } catch (InterruptedException e) {
+            } catch (InterruptedException | SQLException e) {
                 throw new RuntimeException(e);
             }
-
         }
-
     }
 
     private String handleGetRequest(HttpExchange httpExchange) {
@@ -36,7 +33,6 @@ public class MyHttpHandlerForFight implements HttpHandler {
                 .split("=")[1];
     }
 
-
     private String getRequestBodyAsString(HttpExchange httpExchange) throws IOException {
         System.out.println("was post request");
         //TODO Потоки вывода превратить байты в строку
@@ -46,7 +42,7 @@ public class MyHttpHandlerForFight implements HttpHandler {
         return fightersAsString;
     }
 
-    private void handleResponse(HttpExchange httpExchange, String requestBodyFighters) throws IOException, InterruptedException {
+    private void handleResponse(HttpExchange httpExchange, String requestBodyFighters) throws IOException, InterruptedException, SQLException {
         JsonBuildForFight jsonBuild = new JsonBuildForFight();
         FighterConfiguration fighterConfiguration = jsonBuild.fromJsonFighter(requestBodyFighters);
         Fight fight = new Fight();

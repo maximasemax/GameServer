@@ -22,13 +22,6 @@ public class MyHttpHandlerForItem implements HttpHandler {
         }
     }
 
-    private String handleGetRequest(HttpExchange httpExchange) {
-        return httpExchange.
-                getRequestURI()
-                .toString()
-                .split("\\?")[1]
-                .split("=")[1];
-    }
 
     private void handleResponse(HttpExchange httpExchange) throws IOException, InterruptedException, SQLException {
         JsonBuildForItem jsonBuildForItem = new JsonBuildForItem();

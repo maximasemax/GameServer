@@ -15,21 +15,12 @@ public class MyHttpHandlerForPerson implements HttpHandler {
         if ("GET".equals(exchange.getRequestMethod())) {
             try {
                 handleResponse(exchange);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            } catch (SQLException e) {
+            } catch (InterruptedException | SQLException e) {
                 throw new RuntimeException(e);
             }
         }
     }
 
-    private String handleGetRequest(HttpExchange httpExchange) {
-        return httpExchange.
-                getRequestURI()
-                .toString()
-                .split("\\?")[1]
-                .split("=")[1];
-    }
 
     private void handleResponse(HttpExchange httpExchange) throws IOException, InterruptedException, SQLException {
         JsonBuildForPerson jsonBuildForPerson = new JsonBuildForPerson();

@@ -1,34 +1,31 @@
 package HttpHandler;
 
+import DataBase.RecordToBD;
 import model.impl.Fighter;
 import model.impl.FighterConfiguration;
 import model.impl.Item;
 import model.impl.Person;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Fight {
 
 
-    public FighterConfiguration fight(FighterConfiguration fighterConfiguration) throws IOException, InterruptedException {
+    public FighterConfiguration fight(FighterConfiguration fighterConfiguration) throws IOException, InterruptedException, SQLException {
+        RecordToBD recordToBD = new RecordToBD();
         ArrayList<Fighter> fighters = fighterConfiguration.getFighters();
-
         Person person = fighters.get(0).getPerson();
         Item item = fighters.get(0).getItem();
         Person personBot = fighters.get(1).getPerson();
         Item itemBot = fighters.get(1).getItem();
-
-        float damageFromUser = 0;
-        float damageFromBot = 0;
-        float defenceUser = 0;
-        float defenceBot = 0;
         float damageToUser = 0;
         float damageToBot = 0;
-        damageFromUser = person.getAttackSkill() * item.getDamageSkill();
-        damageFromBot = personBot.getAttackSkill() * itemBot.getDamageSkill();
-        defenceUser = person.getDefenceSkill() * item.getDefenceSkill();
-        defenceBot = personBot.getDefenceSkill() * itemBot.getDefenceSkill();
+        float damageFromUser = person.getAttackSkill() * item.getDamageSkill();
+        float damageFromBot = personBot.getAttackSkill() * itemBot.getDamageSkill();
+        float defenceUser = person.getDefenceSkill() * item.getDefenceSkill();
+        float defenceBot = personBot.getDefenceSkill() * itemBot.getDefenceSkill();
         if (damageFromUser > defenceBot) {
             damageToBot = damageFromUser - defenceBot;
             personBot.setHp(personBot.getHp() - damageToBot);
@@ -46,6 +43,9 @@ public class Fight {
         fightersExit.add(new Fighter(0, person, item));
         fightersExit.add(new Fighter(1, personBot, itemBot));
         fighterConfigurationExit.setFighters(fightersExit);
+        recordToBD.recordResultToDB(person.getName(), personBot.getName(), (int) person.getHp()
+                , (int) personBot.getHp(), item.getName(), itemBot.getName(), (int) damageToUser, (int) damageToBot);
+
         return fighterConfigurationExit;
     }
 }
