@@ -10,19 +10,21 @@ import java.io.OutputStream;
 import java.sql.SQLException;
 
 public class MyHttpHandlerForPerson implements HttpHandler {
+
+    private static final String GET = "GET";
+
     @Override
-    public void handle(HttpExchange exchange) throws IOException {
-        if ("GET".equals(exchange.getRequestMethod())) {
+    public void handle(HttpExchange exchange) {
+        if (GET.equals(exchange.getRequestMethod())) {
             try {
                 handleResponse(exchange);
-            } catch (InterruptedException | SQLException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException | IOException e) {
+                System.out.println(e.getMessage());
             }
         }
     }
 
-
-    private void handleResponse(HttpExchange httpExchange) throws IOException, InterruptedException, SQLException {
+    private void handleResponse(HttpExchange httpExchange) throws IOException, SQLException {
         JsonBuildForPerson jsonBuildForPerson = new JsonBuildForPerson();
         DBForPerson dbForPerson = new DBForPerson();
         String response = jsonBuildForPerson.convertPersonsToJson(dbForPerson.getPersonsFromDataBase());
@@ -32,7 +34,5 @@ public class MyHttpHandlerForPerson implements HttpHandler {
         OutputStream os = httpExchange.getResponseBody();
         os.write(rawResponseBody);
         os.close();
-
-
     }
 }

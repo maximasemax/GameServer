@@ -19,6 +19,6 @@ public class Main {
         server.createContext("/getItem", new MyHttpHandlerForItem());
         server.setExecutor(threadPoolExecutor);
         server.start();
-
+        //TODO Создать меседж сервис для все sout
     }
 }

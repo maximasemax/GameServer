@@ -52,14 +52,12 @@ public class Person {
     }
 
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(name);
-        stringBuilder.append("\n");
-        stringBuilder.append(attackSkill);
-        stringBuilder.append("\n");
-        stringBuilder.append(defenceSkill);
-        stringBuilder.append("\n");
-        return stringBuilder.toString();
+        return name +
+                "\n" +
+                attackSkill +
+                "\n" +
+                defenceSkill +
+                "\n";
     }
 
     @Override
@@ -70,7 +68,6 @@ public class Person {
         return Float.compare(person.hp, hp) == 0 && Float.compare(person.attackSkill, attackSkill) == 0 &&
                 Float.compare(person.defenceSkill, defenceSkill) == 0 && Objects.equals(name, person.name);
     }
-//TODO рассказать про различные способы сравнения(компеар, equals, и просто равно равно или больше меньше между двумя переменными)
     @Override
     public int hashCode() {
         return Objects.hash(name, hp, attackSkill, defenceSkill);

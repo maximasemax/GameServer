@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c768838-c9a6-4c3b-9805-04631b6203aa" name="Changes" comment="3.0 &#10;Add history of round to db and refactor cod">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DataBase/RecordToBD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DataBase/RecordToBD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataBase/RecordToBD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/Fight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForFight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HttpHandler/MyHttpHandlerForPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HttpService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JsonBild/JsonBuildForItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameClient1",
+    "last_opened_file_path": "C:/Users/Maximase/IdeaProjects/GameServer",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -102,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660122495186</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3.0 &#10;Add history of round to db and refactor cod">
+      <created>1660233931139</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1660233931139</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class Fight {
 
-
-    public FighterConfiguration fight(FighterConfiguration fighterConfiguration) throws IOException, InterruptedException, SQLException {
+    //TODO Сделать из одного метода , много методов!!!!!!!!!!!
+    public FighterConfiguration fight(FighterConfiguration fighterConfiguration) throws IOException, SQLException {
         RecordToBD recordToBD = new RecordToBD();
         ArrayList<Fighter> fighters = fighterConfiguration.getFighters();
         Person person = fighters.get(0).getPerson();
@@ -45,7 +45,6 @@ public class Fight {
         fighterConfigurationExit.setFighters(fightersExit);
         recordToBD.recordResultToDB(person.getName(), personBot.getName(), (int) person.getHp()
                 , (int) personBot.getHp(), item.getName(), itemBot.getName(), (int) damageToUser, (int) damageToBot);
-
         return fighterConfigurationExit;
     }
 }

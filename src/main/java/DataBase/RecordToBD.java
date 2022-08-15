@@ -1,5 +1,6 @@
 package DataBase;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,16 +13,22 @@ public class RecordToBD {
     static final String USER = "postgres";
     static final String PASS = "postgres";
 
-    public void recordResultToDB(String nameUser, String nameBot, int userHp, int botHp
-            , String itemUser, String itemBot, int damageToUser, int damageToBot) throws SQLException {
+    public void recordResultToDB(String userName, String botName, int userHp, int botHp
+            , String userItem, String botItem, int damageToUser, int damageToBot) throws IOException, SQLException {
+        //TODO Использовать контейнер для входных данных в методе
         tryStartDriver();
         Optional<Connection> connection = connectToDataBase();
-        Statement statement = connection.get().createStatement();
-        int rows = statement.executeUpdate("INSERT INTO history" +
-                " VALUES (" + "'" + nameUser + "'" + ", " + "'" + nameBot + "'"  + ", " + "'" + damageToBot + "'" + ", "
-                + "'" + damageToUser + "'" + ", " + "'" + itemUser + "'" + ", " + "'" + itemUser + "'" + ");");
-        System.out.println(rows);
-        System.out.println("Данные отправились");
+        if (connection.isPresent()) {
+            Statement statement = connection.get().createStatement();
+            //TODO Почитать prepareStatement
+            int rows = statement.executeUpdate("INSERT INTO history" +
+                    " VALUES (" + "'" + userName + "'" + ", " + "'" + botName + "'" + ", " + "'" + damageToBot + "'" + ", "
+                    + "'" + damageToUser + "'" + ", " + "'" + userItem + "'" + ", " + "'" + botItem + "'" + ");");
+            System.out.println(rows);
+            System.out.println("Данные отправились");
+        } else {
+            throw new IOException("Shit Happens");
+        }
     }
 
     private void tryStartDriver() {

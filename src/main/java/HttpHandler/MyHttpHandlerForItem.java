@@ -11,9 +11,12 @@ import java.io.OutputStream;
 import java.sql.SQLException;
 
 public class MyHttpHandlerForItem implements HttpHandler {
+
+    private static final String GET = "GET";
+
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        if ("GET".equals(exchange.getRequestMethod())) {
+        if (GET.equals(exchange.getRequestMethod())) {
             try {
                 handleResponse(exchange);
             } catch (InterruptedException | SQLException e) {
@@ -21,7 +24,6 @@ public class MyHttpHandlerForItem implements HttpHandler {
             }
         }
     }
-
 
     private void handleResponse(HttpExchange httpExchange) throws IOException, InterruptedException, SQLException {
         JsonBuildForItem jsonBuildForItem = new JsonBuildForItem();
@@ -33,7 +35,5 @@ public class MyHttpHandlerForItem implements HttpHandler {
         OutputStream os = httpExchange.getResponseBody();
         os.write(rawResponseBody);
         os.close();
-
-
     }
 }
